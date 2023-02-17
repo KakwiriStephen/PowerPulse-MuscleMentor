@@ -56,9 +56,10 @@ body {
     position: absolute;
     right: 40px;
     top: 0px;
-    width: 700px;
-    height: 900px;
+    width: 590px;
+    height: 100vh;
     margin-top: -330px;
+    margin-right: 35px;
 }
 
 .exercise-card {
