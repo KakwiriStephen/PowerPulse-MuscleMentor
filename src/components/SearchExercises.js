@@ -8,6 +8,7 @@ import { exerciseOptions, fetchData } from "../utils/fetchData";
 
 const SearchExercises = () => {
   const [search, setSearch] = useState("");
+  const [exercises, setExercises] = useState([]);
 
   const handleSearch = async () => {
     if (search) {
@@ -15,7 +16,17 @@ const SearchExercises = () => {
         "https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises/",
         exerciseOptions
       );
-      console.log(exerciseData);
+
+      const searchedExercises = exerciseData.filter(
+        (excercise) =>
+          excercise.name.toLocaleLowerCase().includes(search) ||
+          excercise.muscle.toLocaleLowerCase().includes(search) ||
+          excercise.type.toLocaleLowerCase().includes(search) ||
+          excercise.equipment.toLocaleLowerCase().includes(search)
+      );
+
+      setSearch("");
+      setExercises(searchedExercises);
     }
   };
   return (
