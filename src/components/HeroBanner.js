@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 
-import heroBannerImage from "../assets/images/banner.png";
+import heroBannerImage from "../assets/images/Banner.jpg";
 
 const HeroBanner = () => {
   return (
@@ -45,6 +45,7 @@ const HeroBanner = () => {
       </Button>
 
       <Typography
+        textAlign="center"
         fontWeight={600}
         color="#FF2625"
         sx={{
