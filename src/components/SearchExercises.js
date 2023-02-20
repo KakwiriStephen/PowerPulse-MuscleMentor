@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 import { Box, Stack, Button, TextField, Typography } from "@mui/material";
+import { color } from "@mui/system";
 
 const SearchExercises = () => {
   return (
@@ -23,7 +24,7 @@ const SearchExercises = () => {
               border: "none",
               borderRadius: "40px",
             },
-            width: { lg: "1170px", xs: "350px" },
+            width: { lg: "800px", xs: "350px" },
 
             backgroundColor: "#fff",
             borderRadius: "40px",
@@ -33,7 +34,23 @@ const SearchExercises = () => {
           onChange={(e) => {}}
           placeholder="Search Exercises"
           type="text"
-        ></TextField>
+        />
+
+        <Button
+          className="search-btn"
+          sx={{
+            bgcolor: "#FF2625",
+            color: "#ffff",
+            textTransform: "none",
+            width: { lg: "175px", xs: "75px" },
+            fontSize: { lg: "20px", xs: "14px" },
+            height: "56px",
+            position: "absolute",
+            right: "0",
+          }}
+        >
+          Search
+        </Button>
       </Box>
     </Stack>
   );
