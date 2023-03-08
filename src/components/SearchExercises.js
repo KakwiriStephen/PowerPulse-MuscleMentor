@@ -13,20 +13,21 @@ const SearchExercises = () => {
   const handleSearch = async () => {
     if (search) {
       const exerciseData = await fetchData(
-        "https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises/",
+        "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
 
       const searchedExercises = exerciseData.filter(
-        (excercise) =>
-          excercise.name.toLocaleLowerCase().includes(search) ||
-          excercise.muscle.toLocaleLowerCase().includes(search) ||
-          excercise.type.toLocaleLowerCase().includes(search) ||
-          excercise.equipment.toLocaleLowerCase().includes(search)
+        (exercise) =>
+          exercise.name.toLowerCase().includes(search) ||
+          exercise.target.toLowerCase().includes(search) ||
+          exercise.equipment.toLowerCase().includes(search) ||
+          exercise.bodyPart.toLowerCase().includes(search)
       );
 
       setSearch("");
       setExercises(searchedExercises);
+      console.log(exerciseData);
     }
   };
   return (
