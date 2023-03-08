@@ -20,6 +20,7 @@ const SearchExercises = () => {
 
       setBodyParts(["all", ...bodyPartsData]);
     };
+    fetchExerciseData();
   }, []);
 
   const handleSearch = async () => {
