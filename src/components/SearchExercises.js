@@ -15,7 +15,7 @@ const SearchExercises = () => {
   useEffect(() => {
     const fetchExerciseData = async () => {
       const bodyPartsData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises/bodyPartsList",
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
       );
 
