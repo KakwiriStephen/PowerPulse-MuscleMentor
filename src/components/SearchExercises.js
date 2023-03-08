@@ -5,6 +5,7 @@ import { Box, Stack, Button, TextField, Typography } from "@mui/material";
 import { color } from "@mui/system";
 
 import { exerciseOptions, fetchData } from "../utils/fetchData";
+import HorizontalScrollbar from "./HorizontalScrollbar";
 
 const SearchExercises = () => {
   const [search, setSearch] = useState("");
@@ -89,6 +90,9 @@ const SearchExercises = () => {
         >
           Search
         </Button>
+      </Box>
+      <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
+        <HorizontalScrollbar data={bodyParts} />
       </Box>
     </Stack>
   );
