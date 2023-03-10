@@ -15,7 +15,7 @@ const ExcerciseDetail = () => {
   useEffect(() => {
     const fetchExercisesData = async () => {
       const exerciseDbUrl = "https://exercisedb.p.rapidapi.com";
-      const youTubeSearchUrl =
+      const youtubeSearchUrl =
         "https://youtube-search-and-download.p.rapidapi.com";
 
       const exerciseDetailData = await fetchData(
@@ -24,11 +24,11 @@ const ExcerciseDetail = () => {
       );
       setExerciseDetail(exerciseDetailData);
 
-      const exerciseVideoData = await fetchData(
-        `${youTubeSearchUrl}/search?q=${exerciseDetailData.name}`,
+      const exerciseVideosData = await fetchData(
+        `${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`,
         youtubeOptions
       );
-      setExerciseVideos(exerciseVideoData);
+      setExerciseVideos(exerciseVideosData.contents);
     };
 
     fetchExercisesData();
