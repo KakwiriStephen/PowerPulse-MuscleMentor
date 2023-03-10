@@ -6,6 +6,21 @@ import EquipmentImage from "../assets/icons/equipment.png";
 
 const Detail = ({ exerciseDetail }) => {
   const { name, gifUrl, bodyPart, target, equipment } = exerciseDetail;
+
+  const extraDetail = [
+    {
+      icon: BodyPartImage,
+      name: bodyPart,
+    },
+    {
+      icon: TargetImage,
+      name: target,
+    },
+    {
+      icon: EquipmentImage,
+      name: equipment,
+    },
+  ];
   return (
     <Stack
       gap="60px"
