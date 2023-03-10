@@ -31,9 +31,12 @@ const Detail = ({ exerciseDetail }) => {
       <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
         <Typography variant="h3">{name}</Typography>
         <Typography variant="h6">
-          Exercises keep you strong. <b>{name}</b> {"  "}
-          is one of the best exercises to target your {target}. It will help you
-          improve your mood and gain energy
+          {" "}
+          <span style={{ width: "50%" }}>
+            Exercises keep you strong.
+            <br /> <b>{name}</b> is one of the best exercises to target your{" "}
+            {target}.<br /> It will help you improve your mood and gain energy
+          </span>
         </Typography>
         {extraDetail.map((item) => (
           <Stack key={item.name} direction="row" gap="24px" alignItems="center">
@@ -41,8 +44,8 @@ const Detail = ({ exerciseDetail }) => {
               sx={{
                 background: "#fff2db",
                 borderRadius: "50%",
-                width: "100px",
-                height: "100px",
+                width: "85px",
+                height: "85px",
               }}
             >
               <img
