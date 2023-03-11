@@ -15,14 +15,10 @@ const ExerciseVideos = ({ name, exerciseVideos }) => {
         exercise videos
       </Typography>
       <Stack
-        align="center"
-        display="flex"
+        direction="row"
+        sx={{ gap: { lg: "110px", xs: "50px" } }}
         flexWrap="wrap"
-        flexBasis="auto"
-        sx={{
-          flexDirection: { lg: "row", md: "row" },
-          gap: { lg: "110px", xs: "0" },
-        }}
+        justifyContent="center"
       >
         {exerciseVideos?.slice(0, 6)?.map((item, index) => (
           <a
